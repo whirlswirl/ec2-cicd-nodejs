@@ -1,0 +1,16 @@
+# buildspec.yml
+version: 0.2
+phases:
+    pre_build:
+        commands:
+            - echo Installing npm dependencies.
+            - yarn install
+    build:
+        commands:
+            - echo Build started. # nothing happening here
+    post_build:
+        commands:
+            - echo Build completed! # nothing happening here
+artifacts:
+    files:
+        - '**/*'

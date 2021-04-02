@@ -1,0 +1,12 @@
+# appspec.yml
+version: 0.0
+os: linux
+files:
+    - source: /
+destination: /home/ec2-user/Src/cicd-nodejs-ec2
+overwrite: true
+hooks:
+AfterInstall:
+    - location: scripts/AfterInstallHook.sh
+timeout: 300
+runas: root
